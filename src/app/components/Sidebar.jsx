@@ -8,6 +8,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import Image from "next/image"
+import safi from '@/app/components/Safi_logo.png'
 
 
 export default function Sidebar() {
@@ -16,24 +18,24 @@ export default function Sidebar() {
       <SheetTrigger className="p-2">
         <Menu className="h-6 w-6" />
       </SheetTrigger>
-      <SheetContent side="right" className="w-[250px] bg-pink-100">
+      <SheetContent side="right" className="w-[250px] bg-[#FFFFFF]">
         <SheetHeader>
           {/* <SheetTitle>User</SheetTitle> */}
             <SheetTitle> 
                 <div class="flex justify-center mb-4 mt-6">
-                <p class="w-16 h-16 rounded-full bg-[#701A42] text-pink-100 font-bold flex items-center justify-center text-lg border-2 border-white shadow-sm">S</p>
+                <Image src={safi} class="w-16 h-16 rounded-full border-[#6A5ACD] shadow-sm" alt="User Avatar" />
                 </div>
-            <h1 className="text-lg font-bold text-center text-[#701A42]">Sumiati</h1>
+            <h1 className="text-lg font-bold text-center text-[#6A5ACD]">Safi Indonesia</h1>
             </SheetTitle>
         </SheetHeader>
         <div className="flex flex-col h-full">
         <nav className="mt-4 space-y-2">
-            <a href="#" className="block px-4 py-2 rounded text-[#701A42] hover:bg-gray-200">Home</a>
-            <a href="#" className="block px-4 py-2 rounded text-[#701A42] hover:bg-gray-200">Informasi Bantuan</a>
-            <a href="#" className="block px-4 py-2 rounded text-[#701A42] hover:bg-gray-200">Testimoni</a>
-            <a href="#" className="block px-4 py-2 rounded text-[#701A42] hover:bg-gray-200">Riwayat Bantuan</a>
+            <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Home</a>
+            <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Dashboard Penyalur</a>
+            <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Riwayat Bantuan</a>
+            <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Impact Report</a>
         </nav>
-        <SheetTitle className="font-bold text-lg text-center mt-8 py-8 w-full text-[#313131]">to<span className="text-[#701A42]">Get</span>Her</SheetTitle>
+        <SheetTitle className="font-bold text-lg text-center mt-8 py-8 w-full text-[#6A5ACD]">KIRANA</SheetTitle>
         </div>
       </SheetContent>
     </Sheet>
