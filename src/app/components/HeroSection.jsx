@@ -21,8 +21,8 @@ export default function HeroSection() {
                 {/*subheadline*/}
                 <p className="mt-6 text-lg md:text-xl text-gray-100 drop-shadow">
                     Kirana memudahkanmu menyalurkan bantuan secara{" "}
-                    <span className="text-[#2caad4] font-semibold">transparan</span> dan{" "}
-                    <span className="text-[#2caad4] font-semibold">tepat sasaran</span>{" "}
+                    <span className="text-[#6A5ACD] font-semibold">transparan</span> dan{" "}
+                    <span className="text-[#6A5ACD] font-semibold">tepat sasaran</span>{" "}
                     kepada perempuan & ibu rumah tangga yang membutuhkan.
                 </p>
                 {/*call to action button*/}

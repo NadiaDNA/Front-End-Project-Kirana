@@ -4,6 +4,7 @@ import logo from '@/app/components/Main-Logo.png'
 import Image from 'next/image'
 import HeroSection from "./components/HeroSection"
 import MediaPartner from "./components/mediaPartner"
+import FlowSection from "./components/flowSection"
 
 
 export default function RootLayout({ children }) {
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <main className="p-4">
           <HeroSection />
           <MediaPartner />
+          <FlowSection />
           {children}
         </main>
       </body>
