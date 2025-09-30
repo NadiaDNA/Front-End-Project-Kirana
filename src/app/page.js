@@ -2,6 +2,7 @@ import "./globals.css"
 import Sidebar from "./components/Sidebar"
 import logo from '@/app/components/Main-Logo.png'
 import Image from 'next/image'
+import HeroSection from "./components/HeroSection"
 
 
 export default function RootLayout({ children }) {
@@ -15,7 +16,9 @@ export default function RootLayout({ children }) {
           </div>
            <Sidebar />
         </header>
+
         <main className="p-4">
+          <HeroSection />
           {children}
         </main>
       </body>
