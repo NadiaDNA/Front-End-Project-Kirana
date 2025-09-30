@@ -5,6 +5,7 @@ import Image from 'next/image'
 import HeroSection from "./components/HeroSection"
 import MediaPartner from "./components/mediaPartner"
 import FlowSection from "./components/flowSection"
+import DeliveredSection from "./components/delieredSection"
 
 
 export default function RootLayout({ children }) {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
           <HeroSection />
           <MediaPartner />
           <FlowSection />
+          <DeliveredSection />
           {children}
         </main>
       </body>
