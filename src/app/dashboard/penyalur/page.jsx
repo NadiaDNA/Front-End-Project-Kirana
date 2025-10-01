@@ -5,6 +5,7 @@ import logo from '@/app/components/Main-Logo.png'
 import Image from 'next/image'
 import Hero2 from "./hero-2";
 import Overview from "./overview";
+import Verifikasi from "./verifikasi";
 
 export default function DashboardPenyalur() {
   const { id } = useParams();
@@ -21,6 +22,7 @@ export default function DashboardPenyalur() {
         </header>
         <Hero2 />
         <Overview />
+        <Verifikasi />
       {/* <div className="text-center p-6 mt-6">
         <h1 className="text-3xl font-bold text-[#6A5ACD]">Dashboard Penyalur</h1>
         <p className="text-gray-600 mt-2">
