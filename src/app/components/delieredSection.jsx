@@ -37,7 +37,7 @@ export default function DeliveredSection() {
           Bantuan yang Sudah Tersalurkan
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Transparansi Kirana: setiap bantuan yang disalurkan tercatat dan dapat dipertanggungjawabkan.
+          Setiap bantuan yang disalurkan tercatat dan dapat dipertanggungjawabkan.
         </p>
       </div>
 

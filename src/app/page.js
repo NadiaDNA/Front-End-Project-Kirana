@@ -6,6 +6,7 @@ import HeroSection from "./components/HeroSection"
 import MediaPartner from "./components/mediaPartner"
 import FlowSection from "./components/flowSection"
 import DeliveredSection from "./components/delieredSection"
+import Testimonials from "./testimonials"
 
 
 export default function RootLayout({ children }) {
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           <MediaPartner />
           <FlowSection />
           <DeliveredSection />
+          <Testimonials />
           {children}
         </main>
       </body>
