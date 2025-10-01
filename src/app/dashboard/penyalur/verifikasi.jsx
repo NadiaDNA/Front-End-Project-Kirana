@@ -1,5 +1,7 @@
 "use client";
 import { CheckCircle, Hourglass, FileText } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 
 export default function Verifikasi() {
   // Dummy data bantuan yang diupload user
@@ -11,6 +13,7 @@ export default function Verifikasi() {
     { id: 5, judul: "Pelatihan Formulator Sabun", tanggal: "10 Sep 2025", status: "selesai" },
     { id: 6, judul: "Beasiswa Perempuan Maju", tanggal: "1 Sep 2025", status: "selesai" },
   ];
+  const router = useRouter();
 
   return (
     <section className="bg-gray-50 shadow-md mt-10 rounded-xl p-8 space-y-6">
@@ -65,6 +68,10 @@ export default function Verifikasi() {
           </div>
         ))}
       </div>
+        <div className="text-center pt-6">
+            <button className="bg-[#6A5ACD] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[#5a4ac0] transition"
+             onClick={() => router.push("/riwayat")}>Selengkapnya</button>
+        </div>
     </section>
   );
 }

@@ -36,8 +36,10 @@ export default function Sidebar({ id }) {
             {/* <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Home</a> */}
             <Link href={`/`} className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Home</Link>
             <Link href={`/dashboard/penyalur/`} className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Dashboard Penyalur</Link>
-            <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Riwayat Bantuan</a>
-            <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Impact Report</a>
+            <Link href={`/riwayat/`} className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Riwayat Bantuan</Link>
+            {/* <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Riwayat Bantuan</a> */}
+            {/* <a href="#" className="block px-4 py-2 rounded text-[#6A5ACD] hover:bg-[#A8A8A8]">Impact Report</a> */}
+            
         </nav>
         <SheetTitle className="font-bold text-lg text-center mt-8 py-8 w-full text-[#6A5ACD]">KIRANA</SheetTitle>
         </div>
