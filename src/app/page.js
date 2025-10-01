@@ -13,7 +13,7 @@ import Testimonials from "./testimonials"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[#FFFFFF]">
+      <body >
         <header className="p-4 border-b flex items-center justify-between">
           <div className="ml-5 flex items-center">
             <Image src={logo} alt="Logo" width={40} height={40} className="w-8 h-8" />
