@@ -3,7 +3,8 @@ import { useParams } from "next/navigation";
 import Sidebar from "@/app/components/Sidebar";
 import logo from '@/app/components/Main-Logo.png'
 import Image from 'next/image'
-import Hero2 from "./[id]/hero-2";
+import Hero2 from "./hero-2";
+import Overview from "./overview";
 
 export default function DashboardPenyalur() {
   const { id } = useParams();
@@ -19,7 +20,7 @@ export default function DashboardPenyalur() {
            <Sidebar />
         </header>
         <Hero2 />
-
+        <Overview />
       {/* <div className="text-center p-6 mt-6">
         <h1 className="text-3xl font-bold text-[#6A5ACD]">Dashboard Penyalur</h1>
         <p className="text-gray-600 mt-2">
@@ -29,7 +30,7 @@ export default function DashboardPenyalur() {
 
 
       {/* Ringkasan Bantuan */}
-      <div className="mt-10 p-6">
+      {/* <div className="mt-10 p-6">
         <h2 className="text-xl font-semibold text-[#6A5ACD] mb-4">Ringkasan Bantuan</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white border rounded-lg p-4 shadow">
@@ -44,8 +45,8 @@ export default function DashboardPenyalur() {
             <h3 className="text-lg font-bold text-[#6A5ACD]">Dampak Tercapai</h3>
             <p className="text-gray-600 mt-2">87% target sosial</p>
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 </section>
   );
 }

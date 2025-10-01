@@ -1,16 +1,16 @@
 "use client"
 
 import Image from "next/image"
-import hero from '@/app/components/hero.jpg'
+import dashboard from '@/app/components/dashboard.jpg'
 import { Button } from "@/components/ui/button"
 
 export default function Hero2() {
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <Image src={hero} alt="Hero Image" className="object-cover grayscale" />
+                <Image src={dashboard} alt="Dashboard Image" className="object-cover w-full h-full" />
                 {/*overlay */}
-                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
       {/* <div className="text-center p-6 mt-6">
