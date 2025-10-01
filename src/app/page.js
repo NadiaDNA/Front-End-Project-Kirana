@@ -9,6 +9,7 @@ import DeliveredSection from "./components/delieredSection"
 import Testimonials from "./testimonials"
 
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
             <h1 className="ml-4 text-xl font-bold text-[#6A5ACD]">KIRANA</h1>
           </div>
            <Sidebar />
+
         </header>
 
         <main className="p-4">
