@@ -1,6 +1,9 @@
 "use client";
 
 import { Gift, Users, Folder, DollarSign } from "lucide-react";
+import Image from "next/image"
+import peta from "@/app/components/peta.png";
+
 
 export default function DeliveredSection() {
   const stats = [
@@ -31,12 +34,18 @@ export default function DeliveredSection() {
   ];
 
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-20">
+    <section   className="relative bg-cover bg-center text-white px-4 py-12 md:px-8 lg:px-16">
+      <div className="absolute inset-50 -z-10 opacity-50">
+        <Image src={peta} alt="Peta Indonesia" />
+        {/*overlay */}
+        <div className="absolute inset-0"></div>
+      </div>
+ 
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-[#6A5ACD] mb-4">
           Bantuan yang Sudah Tersalurkan
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-600 max-w-2xl mx-auto mb-20">
           Setiap bantuan yang disalurkan tercatat dan dapat dipertanggungjawabkan.
         </p>
       </div>
