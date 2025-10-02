@@ -13,7 +13,7 @@ import safi from '@/app/components/Safi_logo.png'
 import Link from "next/link";
 
 
-export default function Sidebar({ id }) {
+export default function Sidebar() {
 
 
   return (

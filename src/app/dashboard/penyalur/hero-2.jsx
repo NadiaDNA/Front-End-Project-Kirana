@@ -1,14 +1,16 @@
 "use client"
 
 import Image from "next/image"
-import dashboard from '@/app/components/dashboard.jpg'
+import dashboard from '@/app/components/dashboard.png'
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation";
 
 export default function Hero2() {
+    const router = useRouter();
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <Image src={dashboard} alt="Dashboard Image" className="object-cover w-full h-full" />
+                <Image src={dashboard} alt="Dashboard Image" className="object-cover" />
                 {/*overlay */}
                 <div className="absolute inset-0 bg-black/20"></div>
             </div>
@@ -36,7 +38,7 @@ export default function Hero2() {
                 {/*call to action button*/}
                 <div className="mt-8 mb-8">
                     <Button
-                        href="#"
+                        onClick={() => router.push("/salurkan")}
                         className="bg-[#6A5ACD] text-white text-center font-semibold px-8 py-6 rounded-2xl shadow-lg hover:bg-[#80cce5] transition transform hover:scale-105">
                             Salurkan Bantuan
                     </Button>
