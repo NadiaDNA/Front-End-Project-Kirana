@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from 'next/image';
+import { useBantuanStore } from '@/app/store/bantuanStore';
 import Sidebar from "../components/Sidebar";
 import logo from '@/app/components/Main-Logo.png';
 import {
@@ -16,6 +17,8 @@ import {
 } from "lucide-react";
 
 export default function SalurkanBantuan() {
+  const { setBantuanData } = useBantuanStore();
+
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [provinces, setProvinces] = useState([]);
@@ -149,7 +152,7 @@ export default function SalurkanBantuan() {
     // Struktur data sesuai API
     const dataKirim = {
       judul: form.judul,
-      dekskripsi: form.deskripsi,
+      deskripsi: form.deskripsi,
       target: form.target,
       jumlahOrang: parseInt(form.jumlahOrang),
       jumlahDana: parseInt(form.jumlahDanaPerOrang),
@@ -161,6 +164,7 @@ export default function SalurkanBantuan() {
       jangkauanTentu: form.jangkauan === "tertentu" ? form.jangkauanTentu : "",
       nomorRekening: form.metode === "vendor" ? form.nomorRekening : "",
       kontakPenanggungJawab: form.metode === "langsung" ? form.kontakPenanggungJawab : "",
+      status: "Menunggu"
     };
 
     fetch('https://68d0ee14e6c0cbeb39a2e8fa.mockapi.io/ProgramBantuan', {
@@ -191,6 +195,7 @@ export default function SalurkanBantuan() {
     "Dana - Kirana Indonesia 081254342578790"
   ];
 
+  
   return (
     <section>
       {/* Header */}
@@ -590,4 +595,4 @@ export default function SalurkanBantuan() {
       </div>
     </section>
   );
-}
+  }
