@@ -9,13 +9,13 @@ export default function DeliveredSection() {
   const stats = [
     {
       title: "Total Bantuan",
-      value: "1.250",
+      value: "15.250",
       icon: <Gift className="w-10 h-10 text-[#6A5ACD]" />,
       desc: "Jumlah bantuan yang sudah didistribusikan.",
     },
     {
       title: "Penerima",
-      value: "3.400",
+      value: "300.400",
       icon: <Users className="w-10 h-10 text-[#6A5ACD]" />,
       desc: "Perempuan & keluarga yang menerima bantuan.",
     },

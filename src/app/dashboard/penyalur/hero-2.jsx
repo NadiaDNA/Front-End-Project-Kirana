@@ -10,9 +10,9 @@ export default function Hero2() {
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <Image src={dashboard} alt="Dashboard Image" className="object-cover" />
+                <Image src={dashboard} alt="Dashboard Image" className="object-cover opacity-35" />
                 {/*overlay */}
-                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0"></div>
             </div>
 
       {/* <div className="text-center p-6 mt-6">
@@ -24,11 +24,11 @@ export default function Hero2() {
 
             <div className="relative max-w-3xl text-center">
                 {/*headline*/}
-                <h1 className="text-4xl md:text-6xl text-white font-extrabold leading-tight drop-shadow-lg">
-                    Selamat Datang, <br /> <span className="text-[#6A5ACD]"> Safi Indonesia</span>
+                <h1 className="text-4xl md:text-6xl text-[#6A5ACD] font-extrabold leading-tight drop-shadow-lg">
+                    Selamat Datang, <br /> <span className="text-gray-800"> Safi Indonesia</span>
                 </h1>
                 {/*subheadline*/}
-                <p className="mt-6 text-lg md:text-xl text-gray-100 drop-shadow">
+                <p className="mt-6 text-lg md:text-xl text-gray-800 drop-shadow">
                     Di sini kamu bisa{" "}
                     <span className="text-[#6A5ACD] font-semibold">kelola bantuan,</span>{" "}
                     <span className="text-[#6A5ACD] font-semibold">lihat laporan,</span> dan{" "}

@@ -1,7 +1,29 @@
 "use client";
+import { useEffect } from "react";
+import { useBantuanStore } from "@/app/store/bantuanStore";
 import { CheckCircle, Users, Target, ClipboardList } from "lucide-react";
 
 export default function Overview() {
+  const { bantuanData, setBantuanData } = useBantuanStore();
+
+  // Hitung ringkasan
+  const totalPenerima = bantuanData.reduce(
+    (sum, item) => sum + (parseInt(item.jumlahOrang) || 0),
+    0
+  );
+
+  const totalBantuan = bantuanData.length;
+
+  const sudahDiverifikasi = bantuanData.filter(
+    (item) =>
+      item.status?.toLowerCase() === "diverifikasi" ||
+      item.status?.toLowerCase() === "selesai"
+  ).length;
+
+  const menungguVerifikasi = bantuanData.filter(
+    (item) => item.status?.toLowerCase() === "menunggu"
+  ).length;
+
   return (
     <section className="bg-white shadow-md rounded-xl mt-10 p-8 space-y-8">
       <h1 className="text-3xl font-bold text-center mb-10 text-[#6A5ACD]">Ringkasan Bantuan</h1>
@@ -13,7 +35,7 @@ export default function Overview() {
           <h3 className="text-lg font-semibold text-[#6A5ACD] mb-3 flex items-center gap-2">
             <Users className="w-5 h-5 text-green-600" /> Penerima
           </h3>
-          <p className="text-4xl font-bold text-gray-800">1.245</p>
+          <p className="text-4xl font-bold text-gray-800">{totalPenerima}</p>
           <p className="text-sm text-gray-500 mt-1">Perempuan penerima manfaat</p>
         </div>
 
@@ -34,7 +56,7 @@ export default function Overview() {
           <h3 className="text-lg font-semibold text-[#6A5ACD] mb-3 flex items-center gap-2">
             <ClipboardList className="w-5 h-5 text-purple-600" /> Total Bantuan
           </h3>
-          <p className="text-3xl font-bold text-gray-800">120</p>
+          <p className="text-3xl font-bold text-gray-800">{totalBantuan}</p>
           <p className="text-sm text-gray-500 mt-1">Semua kategori</p>
         </div>
 
@@ -43,7 +65,7 @@ export default function Overview() {
           <h3 className="text-lg font-semibold text-[#6A5ACD] mb-3 flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-green-600" /> Sudah Diverifikasi
           </h3>
-          <p className="text-3xl font-bold text-gray-800">80</p>
+          <p className="text-3xl font-bold text-gray-800">{sudahDiverifikasi}</p>
           <p className="text-sm text-gray-500 mt-1">Siap disalurkan</p>
         </div>
 
@@ -52,7 +74,7 @@ export default function Overview() {
           <h3 className="text-lg font-semibold text-[#6A5ACD] mb-3 flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-yellow-600" /> Menunggu Verifikasi
           </h3>
-          <p className="text-3xl font-bold text-gray-800">15</p>
+          <p className="text-3xl font-bold text-gray-800">{menungguVerifikasi}</p>
           <p className="text-sm text-gray-500 mt-1">Proses validasi</p>
         </div>
       </div>

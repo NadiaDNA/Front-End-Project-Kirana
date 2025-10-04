@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useBantuanStore } from "@/app/store/bantuanStore";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "@/app/components/Main-Logo.png";
 import Sidebar from "@/app/components/Sidebar";
 import { CheckCircle, Hourglass, FileText, Archive, Eye } from "lucide-react";
@@ -126,7 +127,7 @@ const formatDate = (value) => {
                 </div>
 
                 {/* Status */}
-                <div>
+                <div className="flex gap-2 mt-4 md:mt-0">
                   {item.status?.toLowerCase() === "menunggu" && (
                     <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 font-medium text-sm">
                       <Hourglass className="w-4 h-4" /> Menunggu Verifikasi
@@ -142,16 +143,13 @@ const formatDate = (value) => {
                       <Archive className="w-4 h-4" /> Selesai
                     </span>
                   )}
-                </div>
+                
 
                 {/* Action Button */}
-                <div className="flex gap-2 mt-4 md:mt-0">
-                  <button
-                    className="p-2 rounded-full bg-[#6A5ACD] text-white hover:bg-[#5a4ac0] transition"
-                    title="Lihat Detail"
-                  >
+                  <Link
+                    href={`/detail/${item.id}`} className="p-2 rounded-full bg-[#6A5ACD] text-white hover:bg-[#5a4ac0] transition" title="Lihat Detail">
                     <Eye className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))

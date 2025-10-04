@@ -81,16 +81,6 @@ export default function Verifikasi() {
                 </span>
               )}
             </div>
-
-            {/* Action Button */}
-            <div className="flex gap-2 mt-4 md:mt-0">
-              <button
-                className="p-2 rounded-full bg-[#6A5ACD] text-white hover:bg-[#5a4ac0] transition"
-                title="Lihat Detail"
-              >
-                <Eye className="w-4 h-4" />
-              </button>
-            </div>
           </div>
         ))
       ) : (

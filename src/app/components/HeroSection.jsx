@@ -11,18 +11,18 @@ export default function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <Image src={hero} alt="Hero Image" className="object-center object-cover w-full bg-[#6A5ACD]/20" />
+                <Image src={hero} alt="Hero Image" className="object-center object-cover opacity-30 w-full bg-[#6A5ACD]/20" />
                 {/*overlay */}
-                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0  "></div>
             </div>
 
             <div className="relative max-w-3xl text-center">
                 {/*headline*/}
-                <h1 className="text-4xl md:text-6xl text-white font-extrabold leading-tight drop-shadow-lg">
+                <h1 className="text-4xl md:text-6xl text-gray-800 font-extrabold leading-tight drop-shadow-lg">
                     Bantu Perempuan, <br /> <span className="text-[#6A5ACD]"> Bawa Perubahan</span>
                 </h1>
                 {/*subheadline*/}
-                <p className="mt-6 text-lg md:text-xl text-gray-100 drop-shadow">
+                <p className="mt-6 text-lg md:text-xl text-gray-800 drop-shadow">
                     Kirana memudahkanmu menyalurkan bantuan secara{" "}
                     <span className="text-[#6A5ACD] font-semibold">transparan</span> dan{" "}
                     <span className="text-[#6A5ACD] font-semibold">tepat sasaran</span>{" "}
