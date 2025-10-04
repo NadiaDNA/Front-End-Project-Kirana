@@ -5,10 +5,11 @@ import Image from 'next/image';
 import { useBantuanStore } from '@/app/store/bantuanStore';
 import Sidebar from "../components/Sidebar";
 import logo from '@/app/components/Main-Logo.png';
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
   FileText,
   Users,
-  Phone,
+  AlertCircle,
   Upload,
   ClipboardList,
   CheckCircle,
@@ -42,6 +43,7 @@ export default function SalurkanBantuan() {
     eWallet: "",
     kontakPenanggungJawab: "",
   });
+  const [errorMsg, setErrorMsg] = useState("");
 
   // Load data wilayah Indonesia
   useEffect(() => {
@@ -96,8 +98,9 @@ export default function SalurkanBantuan() {
   const handleNext = () => {
     if (validateStep()) {
       setStep(prev => prev + 1);
+      setErrorMsg("")
     } else {
-      alert("Harap lengkapi data sebelum melanjutkan");
+      setErrorMsg("⚠️ Harap lengkapi data sebelum melanjutkan.");
     }
   };
 
@@ -174,7 +177,7 @@ export default function SalurkanBantuan() {
     })
       .then(res => res.json())
       .then(data => {
-        alert("Data berhasil dikirim ke API");
+        setErrorMsg("❌ Gagal kirim data ke API, coba lagi nanti.");
         setSubmitted(true);
       })
       .catch(() => {
@@ -208,6 +211,14 @@ export default function SalurkanBantuan() {
         </header>
 
       <div className="max-w-3xl mx-auto p-8 bg-gray-50 shadow-md rounded-xl mt-10">
+        {errorMsg && (
+  <Alert variant="destructive" className="mb-6">
+    <AlertCircle className="h-4 w-4" />
+    <AlertTitle>Terjadi Kesalahan</AlertTitle>
+    <AlertDescription>{errorMsg}</AlertDescription>
+  </Alert>
+)}
+
         {submitted ? (
           <div className="text-center space-y-6 py-10">
             <CheckCircle className="w-16 h-16 text-green-600 mx-auto" />
