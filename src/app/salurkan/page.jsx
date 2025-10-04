@@ -177,7 +177,6 @@ export default function SalurkanBantuan() {
     })
       .then(res => res.json())
       .then(data => {
-        setErrorMsg("❌ Gagal kirim data ke API, coba lagi nanti.");
         setSubmitted(true);
       })
       .catch(() => {
