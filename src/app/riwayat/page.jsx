@@ -63,7 +63,7 @@ const formatDate = (value) => {
 
 
   return (
-    <section>
+    <section className="p-4 container mx-auto max-w-7xl">
       {/* Header */}
       <header className="p-4 border-b flex items-center justify-between">
         <div className="ml-5 flex items-center">

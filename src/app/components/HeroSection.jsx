@@ -11,7 +11,7 @@ export default function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <Image src={hero} alt="Hero Image" className="object-center object-cover opacity-30 w-full bg-[#6A5ACD]/20" />
+                <Image src={hero} alt="Hero Image" className="object-center object-cover opacity-30 w-full bg-[#6A5ACD]/20" fill style={{ objectFit: 'cover' }} priority/>
                 {/*overlay */}
                 <div className="absolute inset-0  "></div>
             </div>
@@ -29,7 +29,7 @@ export default function HeroSection() {
                     kepada perempuan & ibu rumah tangga yang membutuhkan.
                 </p>
                 {/*call to action button*/}
-                <div className="mt-8 mb-8">
+                <div className="mt-8 ">
                     <Button
                         onClick={() => router.push("/salurkan")}
                         className="bg-[#6A5ACD] text-white text-center font-semibold px-8 py-6 rounded-2xl shadow-lg hover:bg-[#80cce5] transition transform hover:scale-105">

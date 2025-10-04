@@ -11,7 +11,7 @@ export default function DashboardPenyalur() {
   const { id } = useParams();
 
   return (
-    <section>
+    <section className="p-4 container mx-auto max-w-7xl">
       {/* Sidebar */}
         <header className="p-4 border-b flex items-center justify-between">
           <div className="ml-5 flex items-center">

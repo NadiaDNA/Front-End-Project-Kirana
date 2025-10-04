@@ -200,16 +200,15 @@ export default function SalurkanBantuan() {
 
   
   return (
-    <section>
+    <section className="p-4 container mx-auto max-w-7xl">
       {/* Header */}
         <header className="p-4 border-b flex items-center justify-between">
-            <div className="ml-5 flex items-center">
-                <Image src={logo} alt="Logo" width={40} height={40} className="w-8 h-8" />
-                    <h1 className="ml-4 text-xl font-bold text-[#6A5ACD]">KIRANA</h1>
-            </div>
-            <Sidebar />
+          <div className="ml-5 flex items-center">
+            <Image src={logo} alt="Logo" width={40} height={40} className="w-8 h-8" />
+            <h1 className="ml-4 text-xl font-bold text-[#6A5ACD]">KIRANA</h1>
+          </div>
+           <Sidebar />
         </header>
-
       <div className="max-w-3xl mx-auto p-8 bg-gray-50 shadow-md rounded-xl mt-10">
         {errorMsg && (
   <Alert variant="destructive" className="mb-6">

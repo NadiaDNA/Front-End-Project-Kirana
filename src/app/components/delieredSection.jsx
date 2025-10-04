@@ -34,9 +34,9 @@ export default function DeliveredSection() {
   ];
 
   return (
-    <section   className="relative bg-cover bg-center text-white px-4 py-12 md:px-8 lg:px-16">
-      <div className="absolute inset-50 -z-10 opacity-50">
-        <Image src={peta} alt="Peta Indonesia" />
+    <section   className="relative bg-cover bg-center text-white px-4 py-12 md:px-8 lg:px-16 max-w-7xl mx-auto">
+      <div className="absolute inset-0 -z-10 w-full h-full opacity-50">
+        <Image src={peta} alt="Peta Indonesia" fill style={{ objectFit: 'cover' }} />
         {/*overlay */}
         <div className="absolute inset-0"></div>
       </div>

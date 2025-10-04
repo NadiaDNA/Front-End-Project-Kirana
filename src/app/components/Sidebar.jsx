@@ -6,6 +6,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetDescription,
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import Image from "next/image"
@@ -21,7 +22,7 @@ export default function Sidebar() {
       <SheetTrigger className="p-2">
         <Menu className="h-6 w-6" />
       </SheetTrigger>
-      <SheetContent side="right" className="w-[250px] bg-[#FFFFFF]">
+      <SheetContent side="right" className="w-[250px] bg-[#FFFFFF]" descriptionId="sidebar-desc">
         <SheetHeader>
           {/* <SheetTitle>User</SheetTitle> */}
             <SheetTitle> 
@@ -30,6 +31,9 @@ export default function Sidebar() {
                 </div>
             <p className="text-xl font-bold text-center text-[#6A5ACD]">Safi Indonesia</p>
             </SheetTitle>
+            <SheetDescription id="sidebar-desc" className="sr-only">
+             Sidebar navigasi untuk pengguna Safi Indonesia.
+            </SheetDescription>
         </SheetHeader>
         <div className="flex flex-col h-full">
         <nav className="mt-4 space-y-2">

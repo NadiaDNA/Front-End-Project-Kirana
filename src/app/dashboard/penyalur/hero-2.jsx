@@ -10,17 +10,10 @@ export default function Hero2() {
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <Image src={dashboard} alt="Dashboard Image" className="object-cover opacity-35" />
+                <Image src={dashboard} alt="Dashboard Image" className="object-cover opacity-35" priority/>
                 {/*overlay */}
                 <div className="absolute inset-0"></div>
             </div>
-
-      {/* <div className="text-center p-6 mt-6">
-        <h1 className="text-3xl font-bold text-[#6A5ACD]">Dashboard Penyalur</h1>
-        <p className="text-gray-600 mt-2">
-          Selamat datang, <strong>Safi</strong>. Di sini kamu bisa kelola bantuan, lihat laporan, dan pantau dampak.
-        </p>
-      </div> */}
 
             <div className="relative max-w-3xl text-center">
                 {/*headline*/}
