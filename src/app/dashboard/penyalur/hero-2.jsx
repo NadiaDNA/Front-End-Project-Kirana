@@ -8,11 +8,11 @@ import { useRouter } from "next/navigation";
 export default function Hero2() {
     const router = useRouter();
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center px-2 overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <Image src={dashboard} alt="Dashboard Image" className="object-cover opacity-35" priority/>
+                <Image src={dashboard} alt="Dashboard Image" className="object-cover w-full opacity-35" fill style={{ objectFit: 'cover' }} priority/>
                 {/*overlay */}
-                <div className="absolute inset-0"></div>
+                <div className="absolute"></div>
             </div>
 
             <div className="relative max-w-3xl text-center">
@@ -29,7 +29,7 @@ export default function Hero2() {
                     dari program yang kamu salurkan
                 </p>
                 {/*call to action button*/}
-                <div className="mt-8 mb-8">
+                <div className="mt-8">
                     <Button
                         onClick={() => router.push("/salurkan")}
                         className="bg-[#6A5ACD] text-white text-center font-semibold px-8 py-6 rounded-2xl shadow-lg hover:bg-[#80cce5] transition transform hover:scale-105">
