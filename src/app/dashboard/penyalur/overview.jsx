@@ -16,7 +16,7 @@ export default function Overview() {
 
   const sudahDiverifikasi = bantuanData.filter(
     (item) =>
-      item.status?.toLowerCase() === "diverifikasi" ||
+      item.status?.toLowerCase() === "verifikasi" ||
       item.status?.toLowerCase() === "selesai"
   ).length;
 
