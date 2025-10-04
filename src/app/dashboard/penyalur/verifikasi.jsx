@@ -44,7 +44,7 @@ export default function Verifikasi() {
   return (
     <section>
     <div className="p-8 space-y-4">
-      <h1 className="text-2xl font-bold text-[#6A5ACD]">Verifikasi Bantuan</h1>
+      <h1 className="text-2xl font-bold text-center text-[#6A5ACD]">Status Bantuan Terkini</h1>
       {top5Data.length > 0 ? (
         top5Data.map((item) => (
           <div
