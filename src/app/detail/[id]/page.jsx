@@ -38,6 +38,17 @@ export default function BantuanDetailPage({ params }) {
     verifikasi: { text: "Sudah diverifikasi", color: "bg-blue-100 text-blue-700", icon: <FileText className="w-4 h-4 mr-1" /> },
     selesai: { text: "Bantuan sudah tersalurkan", color: "bg-green-100 text-green-700", icon: <CheckCircle className="w-4 h-4 mr-1" /> },
   };
+  
+  // Fungsi untuk ubah timestamp ke format tanggal Indonesia
+const formatTanggal = (timestamp) => {
+
+  const date = new Date(Number(timestamp) * 1000);
+  return date.toLocaleDateString("id-ID", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
+};
 
   return (
     <section className="max-w-3xl mx-auto p-6">
@@ -99,11 +110,11 @@ export default function BantuanDetailPage({ params }) {
             </div>
             <div className="flex items-center gap-2 p-3 rounded-lg bg-indigo-50 border">
               <Clock className="w-4 h-4 text-indigo-600" />
-              <span className="font-semibold">Tanggal Mulai:</span> {data.tanggalMulai}
+              <span className="font-semibold">Tanggal Mulai:</span> {formatTanggal(data.tanggalMulai)}
             </div>
             <div className="flex items-center gap-2 p-3 rounded-lg bg-teal-50 border">
               <Clock className="w-4 h-4 text-teal-600" />
-              <span className="font-semibold">Tanggal Akhir:</span> {data.tanggalAkhir}
+              <span className="font-semibold">Tanggal Akhir:</span> {formatTanggal(data.tanggalAkhir)}
             </div>
             <div className="flex items-center gap-2 p-3 rounded-lg bg-red-50 border">
               <FileText className="w-4 h-4 text-red-600" />
